@@ -1,24 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AIK-T9-0YP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Camera-->
+        <scene sceneID="YQ2-qv-qFb">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="xR4-nn-E0S" customClass="CameraViewController" customModule="Dave_Practical_6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ctk-As-pbZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyI-r4-U0T">
+                                <rect key="frame" x="180" y="314" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="xR4-nn-E0S" eventType="touchUpInside" id="fQo-uw-JjE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UyI-r4-U0T" firstAttribute="leading" secondItem="OsK-cD-O3Z" secondAttribute="leading" constant="180" id="YPG-Tu-izv"/>
+                            <constraint firstItem="OsK-cD-O3Z" firstAttribute="trailing" secondItem="UyI-r4-U0T" secondAttribute="trailing" constant="180" id="mch-zf-psM"/>
+                            <constraint firstItem="UyI-r4-U0T" firstAttribute="top" secondItem="OsK-cD-O3Z" secondAttribute="top" constant="226" id="zGt-p8-iOK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OsK-cD-O3Z"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Camera" id="QGk-MI-j7c"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qmg-Eu-Wih" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="672.46376811594212" y="-153.34821428571428"/>
+        </scene>
+        <!--QR Code-->
+        <scene sceneID="CIF-Ss-iAH">
+            <objects>
+                <viewController id="FXj-td-1bQ" customClass="ViewController" customModule="Dave_Practical_6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="78w-R6-V0v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bnx-be-TXj">
+                                <rect key="frame" x="159" y="169" width="97" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DiO-mM-LSq">
+                                <rect key="frame" x="87" y="264" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Sgz-WV-hRo" firstAttribute="trailing" secondItem="DiO-mM-LSq" secondAttribute="trailing" constant="87" id="BJ5-s1-wyd"/>
+                            <constraint firstItem="DiO-mM-LSq" firstAttribute="top" secondItem="Bnx-be-TXj" secondAttribute="bottom" constant="61" id="PKi-wn-zIx"/>
+                            <constraint firstItem="Bnx-be-TXj" firstAttribute="leading" secondItem="Sgz-WV-hRo" secondAttribute="leading" constant="159" id="SCF-Sa-DUS"/>
+                            <constraint firstItem="Bnx-be-TXj" firstAttribute="top" secondItem="Sgz-WV-hRo" secondAttribute="top" constant="81" id="ino-7R-f8S"/>
+                            <constraint firstItem="DiO-mM-LSq" firstAttribute="leading" secondItem="Sgz-WV-hRo" secondAttribute="leading" constant="87" id="rSJ-zu-0uB"/>
+                            <constraint firstItem="Sgz-WV-hRo" firstAttribute="trailing" secondItem="Bnx-be-TXj" secondAttribute="trailing" constant="158" id="vZr-bd-Q2r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sgz-WV-hRo"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="QR Code" id="tPX-MS-VJy"/>
+                    <connections>
+                        <outlet property="inputURL" destination="Bnx-be-TXj" id="vMl-c5-Qal"/>
+                        <outlet property="qrImage" destination="DiO-mM-LSq" id="FZU-6M-JNL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FyN-Ji-TTM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672.46376811594212" y="-803.57142857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="PMY-jr-qvt">
+            <objects>
+                <tabBarController id="AIK-T9-0YP" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gz4-Ld-f2u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4i8-Hu-oMl" kind="relationship" relationship="viewControllers" id="YZ5-G5-Ha5"/>
+                        <segue destination="RaA-H9-4Nf" kind="relationship" relationship="viewControllers" id="wf4-oZ-vRo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u3Q-Rj-fDs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1154" y="-479"/>
+        </scene>
+        <!--QR Code-->
+        <scene sceneID="mHq-Ok-8a4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4i8-Hu-oMl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="QR Code" id="SK3-74-3e6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JbE-er-LFg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FXj-td-1bQ" kind="relationship" relationship="rootViewController" id="IF8-nw-cig"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xCN-NS-afV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-236.23188405797103" y="-803.57142857142856"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="adF-rN-UQ4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RaA-H9-4Nf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Camera" id="TBr-HC-V8R"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YXv-wT-zoe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xR4-nn-E0S" kind="relationship" relationship="rootViewController" id="lIe-en-XKG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ftt-Cl-ahk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-236.23188405797103" y="-153.34821428571428"/>
         </scene>
     </scenes>
 </document>

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		8F17BF4A238FAB6500C96D5E /* Dave_Practical_6.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F17BF48238FAB6500C96D5E /* Dave_Practical_6.xcdatamodeld */; };
 		8F17BF4C238FAB6600C96D5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F17BF4B238FAB6600C96D5E /* Assets.xcassets */; };
 		8F17BF4F238FAB6600C96D5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F17BF4D238FAB6600C96D5E /* LaunchScreen.storyboard */; };
+		8FDFF3FE238FBAB90095661F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDFF3FD238FBAB90095661F /* CameraViewController.swift */; };
+		D95FBD084AF76A27078E19D2 /* Pods_Dave_Practical_6.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF9F9383EB66C296DE17668 /* Pods_Dave_Practical_6.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		8F17BF4B238FAB6600C96D5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F17BF4E238FAB6600C96D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F17BF50238FAB6600C96D5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FDFF3FD238FBAB90095661F /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		B27F9F0EBD98C0C5F6DCB85B /* Pods-Dave Practical 6.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dave Practical 6.release.xcconfig"; path = "Target Support Files/Pods-Dave Practical 6/Pods-Dave Practical 6.release.xcconfig"; sourceTree = "<group>"; };
+		D97C05B59F498C1EF44E5955 /* Pods-Dave Practical 6.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dave Practical 6.debug.xcconfig"; path = "Target Support Files/Pods-Dave Practical 6/Pods-Dave Practical 6.debug.xcconfig"; sourceTree = "<group>"; };
+		DAF9F9383EB66C296DE17668 /* Pods_Dave_Practical_6.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dave_Practical_6.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95FBD084AF76A27078E19D2 /* Pods_Dave_Practical_6.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32CEDDAA5B6A5D108660E39B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D97C05B59F498C1EF44E5955 /* Pods-Dave Practical 6.debug.xcconfig */,
+				B27F9F0EBD98C0C5F6DCB85B /* Pods-Dave Practical 6.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8F17BF33238FAB6500C96D5E = {
 			isa = PBXGroup;
 			children = (
 				8F17BF3E238FAB6500C96D5E /* Dave Practical 6 */,
 				8F17BF3D238FAB6500C96D5E /* Products */,
+				32CEDDAA5B6A5D108660E39B /* Pods */,
+				C09517B24BB235735B59B126 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +79,7 @@
 				8F17BF3F238FAB6500C96D5E /* AppDelegate.swift */,
 				8F17BF41238FAB6500C96D5E /* SceneDelegate.swift */,
 				8F17BF43238FAB6500C96D5E /* ViewController.swift */,
+				8FDFF3FD238FBAB90095661F /* CameraViewController.swift */,
 				8F17BF45238FAB6500C96D5E /* Main.storyboard */,
 				8F17BF4B238FAB6600C96D5E /* Assets.xcassets */,
 				8F17BF4D238FAB6600C96D5E /* LaunchScreen.storyboard */,
@@ -70,6 +89,14 @@
 			path = "Dave Practical 6";
 			sourceTree = "<group>";
 		};
+		C09517B24BB235735B59B126 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAF9F9383EB66C296DE17668 /* Pods_Dave_Practical_6.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F17BF53238FAB6600C96D5E /* Build configuration list for PBXNativeTarget "Dave Practical 6" */;
 			buildPhases = (
+				AD1475FD54A9F2D95D33E6EA /* [CP] Check Pods Manifest.lock */,
 				8F17BF38238FAB6500C96D5E /* Sources */,
 				8F17BF39238FAB6500C96D5E /* Frameworks */,
 				8F17BF3A238FAB6500C96D5E /* Resources */,
+				957D135D4D98A944885EF9F5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,12 +165,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		957D135D4D98A944885EF9F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dave Practical 6/Pods-Dave Practical 6-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dave Practical 6/Pods-Dave Practical 6-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dave Practical 6/Pods-Dave Practical 6-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD1475FD54A9F2D95D33E6EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dave Practical 6-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8F17BF38238FAB6500C96D5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8F17BF4A238FAB6500C96D5E /* Dave_Practical_6.xcdatamodeld in Sources */,
+				8FDFF3FE238FBAB90095661F /* CameraViewController.swift in Sources */,
 				8F17BF44238FAB6500C96D5E /* ViewController.swift in Sources */,
 				8F17BF40238FAB6500C96D5E /* AppDelegate.swift in Sources */,
 				8F17BF42238FAB6500C96D5E /* SceneDelegate.swift in Sources */,
@@ -286,6 +358,7 @@
 		};
 		8F17BF54238FAB6600C96D5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D97C05B59F498C1EF44E5955 /* Pods-Dave Practical 6.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -303,6 +376,7 @@
 		};
 		8F17BF55238FAB6600C96D5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B27F9F0EBD98C0C5F6DCB85B /* Pods-Dave Practical 6.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

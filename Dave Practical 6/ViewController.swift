@@ -7,12 +7,28 @@
 //
 
 import UIKit
+import QRCoder
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var inputURL: UITextField!
+    @IBOutlet weak var qrImage: UIImageView!
+    var inputtedURL: URL!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        inputURL.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool { // whenever the this code runs when anything is enter in the textview
+        inputtedURL = URL(fileURLWithPath: inputURL.text!)
+        let generator = QRCodeGenerator()
+        //Default correction level is M
+        generator.correctionLevel = .H
+        qrImage.image = generator.createImage(url: inputtedURL, size: CGSize(width: 200,height: 200))
+        return true
     }
 
 
